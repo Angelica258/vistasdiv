@@ -1,0 +1,56 @@
+<div class="row" id="contenedor">
+	<div class="col-xs-12 col-sm-9">
+		<div class="page-header">
+			<h2>Realizar Venta</h2>
+		</div>
+
+<form >
+	<div class="col-xs-12 col-sm-9">Buscar Repuesto:</label>
+	         <div class="input-group">
+	             <div class="input-group-addon"><i class='fas fa-car-side'></i></div>
+	                <input name="producto" type="text" class="form-control" placeholder="Digite el nombre del producto" required>
+	                <div class="input-group-btn">
+                         <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+                     </div>
+	         </div>
+	</div>
+</form>
+<form >
+<div class="col-xs-12 col-sm-9">
+	<h4>Detalle</h4>
+	<!-- aca vala lista del historial del vehiculo-->
+	<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th>stok</th>
+			      <th>Nombre</th>
+			      <th>Vr. Unit</th>
+			      <th>Cantidad</th>			
+			      <th>Total</th>
+			      <th>Accion</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>10</td>
+			      <td>Frenos Disco Delanteros</td>
+			      <td>15.000</td>
+			      <td><input type="number" class="form-control" value="0" min="1"></td>
+			      <td></td>
+			      <td><button type="button" class="btn btn-info">Agregar</button></td>
+			    </tr>
+			   	<tr>
+			      <td>10</td>
+			      <td>Amortiguadores </td>
+			      <td>45.000</td>
+			      <td><input type="number" class="form-control" value="0" min="1"></td>
+			      <td></td>
+			      <td><button type="button" class="btn btn-info">Agregar</button></td>
+			    </tr>		
+			  </tbody>
+	</table>
+<button  class="btn btn-info"  type="submit">Finalizar Orden</button>
+ <button  class="btn btn-info"  data-toggle="modal" data-target="#VerFactura" >Ver Factura</button>
+ 	<!-- carga la factuta en el modal-->
+</form>
+</div>

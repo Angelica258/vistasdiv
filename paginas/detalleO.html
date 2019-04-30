@@ -1,0 +1,217 @@
+<div class="row" id="contenedor">
+	<div class="col-xs-12 col-sm-9">
+		<div class="page-header">
+			<h2>Detalle Orden de Servicio</h2>
+		</div>
+<form>
+		<div >
+			<p>Taller la Cero</p>
+			<p>NIT: 1362547896 - 2</p>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<p>Orden de Servicio N°:</p>
+			<p >Fecha:</p>
+			<p >Cliente:</p>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<p >Cedula N°:</p>
+			<p >Tipo de Vehiculo:</p>
+			<p >Placa N°:</p>
+		</div>
+        
+		<div class="form-group col-xs-12 col-sm-6">
+	        <label class="control-label">Buscar Servicio:</label>
+	            <div class="input-group">
+	                <div class="input-group-addon"><i class="fas fa-clipboard-list"></i></div>
+	                   <input name="nomservicio" type="text" class="form-control" placeholder="Digite nombre del Servicio" required>
+	                   <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+	            </div>
+	             <div class="button">
+		            <button  class="btn btn-info"  type="submit">Agregar</button>
+		        </div>
+	    </div>
+		
+		<div class="form-group col-xs-12 col-sm-6">
+	        <label class="control-label">Buscar Producto:</label>
+	            <div class="input-group">
+	                <div class="input-group-addon"><i class="fas fa-clipboard-list"></i></div>
+	                   <input name="nomProducto" type="text" class="form-control" placeholder="Digite nombre del Producto" required>
+	                   <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+	            </div>
+	            <div class="button">
+		                <button  class="btn btn-info"  type="submit">Agregar</button>
+		 				<button  class="btn btn-info"  data-toggle="modal" data-target="#AOtro" >Otro</button>
+		 				<!-- modal agregar otro repuesto-->
+							<div class="modal" role="dialog" id="AOtro">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title">Repuesto</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+									       	<label class="control-label">Nombre del Producto:</label>  
+									       	<input name="nomProducto" type="text" class="form-control" placeholder="Nombre del Producto" required>
+								       
+									       <div class="input-group">
+										       	<label class="control-label">Cantidad:</label> 
+										       	<input type="number" class="form-control" value="0" min="1">
+									       </div>
+									       <div>
+									       		<label><i class="fas fa-user"></i><input type="checkbox" class="form-control"></label>
+									      </div>
+									    </div>
+								      <div class="modal-footer">
+									        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+									        <button type="button" class="btn btn-info">Agregar</button>
+								      </div>
+								    </div>
+								  </div>
+							</div>
+			    </div>
+		</div>
+
+	    <div class="col-xs-12 col-sm-6">
+			<h4>Servicios Adquiridos</h4>
+			<!-- aca vala lista de servicios agregados-->
+			<table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>item</th>
+			        <th>Detalle</th>
+			        <th>Valor</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>1</td>
+			        <td>Reemplazo de Focos</td>
+			        <td>15.000</td>
+			      </tr>
+			      <tr>
+			        <td>2</td>
+			        <td>Revision, limpieza y ajuste de frenos</td>
+			        <td>20.000</td>
+			      </tr>			
+			    </tbody>
+			</table>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<h4>Productos Adquiridos</h4>
+			<!-- aca vala lista de productos agregados-->
+			<table class="table table-striped">
+			    <thead>
+			      <tr>
+			        <th>Cant.</th>
+			        <th>Detalle</th>
+			        <th>Opcion</th>
+			        <th>Valor</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td>1</td>
+			        <td>Disco Freno Delantero</td>
+			        <td><i class="fas fa-user"></i></td>
+			        <td>0</td>
+			      </tr>
+			      <tr>
+			        <td>1</td>
+			        <td>Farola DErecha Negra</td>
+			        <td><i class="fas fa-home"></i></td>
+			        <td>35.000</td>
+			      </tr>	
+			    </tbody>
+			</table>
+		</div>
+		<div >
+			<h4>Agregar Nota</h4>
+			<textarea class="form-control " rows="2"></textarea>
+		</div>
+		<div class="button">
+		    <button  class="btn btn-info"  type="submit">Ver Historial</button>
+		    <button  class="btn btn-info"  type="submit">Guardar</button>
+		    <button  class="btn btn-info"  type="submit">Finalizar Orden</button>
+                <button  class="btn btn-info"  data-toggle="modal" data-target="#VerFactura" >Ver Factura</button>
+				<!-- modal de ver factura-->
+					<div class="modal" role="dialog" id="VerFactura">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title">Detalle de Factura</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+								       	<div >
+											<h4>Taller la Cero</h4>
+											<h5>NIT: 1362547896 - 2</h5>
+										</div>
+
+										<div >
+											<p>Orden de Servicio N°:</p>
+											<p >Fecha:</p>
+											<p >Cliente:</p>
+										</div>
+										<div >
+											<p >Cedula N°:</p>
+											<p >Tipo de Vehiculo:</p>
+											<p >Placa N°:</p>
+										</div>						
+										<div>
+											<h4>Productos Adquiridos</h4>
+											<!-- aca vala lista de productos agregados-->
+											<table class="table table-striped">
+											    <thead>
+											      <tr>
+											        <th>Cant.</th>
+											        <th>Detalle</th>
+											        <th>Opcion</th>
+											        <th>Valor</th>
+											      </tr>
+											    </thead>
+											    <tbody>
+											      <tr>
+											        <td>1</td>
+											        <td>Disco Freno Delantero</td>
+											        <td><i class="fas fa-user"></i></td>
+											        <td>0</td>
+											      </tr>
+											      <tr>
+											        <td>1</td>
+											        <td>Farola DErecha Negra</td>
+											        <td><i class="fas fa-home"></i></td>
+											        <td>35.000</td>
+											      </tr>	
+											    </tbody>
+											</table>
+										</div>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+								        <button type="button" class="btn btn-info">Imprimir</button>
+								      </div>
+								    </div>
+								  </div>
+							</div>
+            </div>
+</form>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+ 							
